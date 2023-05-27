@@ -15,7 +15,7 @@ const Structure = () => {
         overflowY: "auto",
       }}>
       <Typography
-        variant="h4"
+        variant="h5"
         sx={{
           fontWeight: "bold",
           color: "white",

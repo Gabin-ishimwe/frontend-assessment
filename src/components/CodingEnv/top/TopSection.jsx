@@ -7,7 +7,8 @@ const TopSection = () => {
   return (
     <Box
       sx={{
-        flexBasis: "calc(50% + 42px)",
+        // flexBasis: "calc(50% + 42px)",
+        flex: 1,
         display: "flex",
       }}>
       <Box

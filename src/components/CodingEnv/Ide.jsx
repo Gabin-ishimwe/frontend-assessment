@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Box } from "@mui/material";
 import React from "react";
+import BottomSection from "./bottom/BottomSection";
 import TopSection from "./top/TopSection";
 
 const Ide = () => {
@@ -13,11 +14,7 @@ const Ide = () => {
         flexDirection: "column",
       }}>
       <TopSection />
-      <Box
-        sx={{
-          flexBasis: "calc(50% - 42px)",
-          backgroundColor: "#1f2937",
-        }}></Box>
+      <BottomSection />
     </Box>
   );
 };
