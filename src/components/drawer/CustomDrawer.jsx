@@ -98,7 +98,7 @@ const CustomDrawer = ({ open, handleClick }) => {
           </List>
           <Divider
             variant="middle"
-            sx={{ backgroundColor: "#9ca3af", opacity: open ? 0 : 1 }}
+            sx={{ backgroundColor: "#6b7280", opacity: open ? 0 : 1 }}
           />
           <List>
             <CustomSideBarItem open={open} item={"Label 1"}>
@@ -110,7 +110,7 @@ const CustomDrawer = ({ open, handleClick }) => {
           </List>
           <Divider
             variant="middle"
-            sx={{ backgroundColor: "#9ca3af", opacity: open ? 0 : 1 }}
+            sx={{ backgroundColor: "#6b7280", opacity: open ? 0 : 1 }}
           />
           <List>
             <CustomSideBarItem open={open} item={"Label 3"}>
@@ -128,7 +128,7 @@ const CustomDrawer = ({ open, handleClick }) => {
           </List>
           <Divider
             variant="middle"
-            sx={{ backgroundColor: "#9ca3af", opacity: open ? 0 : 1 }}
+            sx={{ backgroundColor: "#6b7280", opacity: open ? 0 : 1 }}
           />
           <List>
             <ListItem disablePadding sx={{ display: "block" }}>

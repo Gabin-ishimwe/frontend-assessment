@@ -6,14 +6,14 @@ import React from "react";
 
 const CustomButton = styled(Button)({
   textTransform: "none",
-  backgroundColor: "#60a5fa",
+  backgroundColor: "#2563eb",
   boxShadow: 0,
   borderRadius: 5,
   display: "flex",
   alignItems: "center",
   padding: "6px 12px",
   "&:hover": {
-    backgroundColor: "#60a5fa",
+    backgroundColor: "#2563eb",
   },
   marginRight: 12,
 });

@@ -11,7 +11,7 @@ const DevButton = styled(Button)({
   boxShadow: 0,
   borderRadius: 5,
   border: "0.5px solid",
-  borderColor: "#9ca3af",
+  borderColor: "#6b7280",
   display: "flex",
   padding: "0",
   "&:hover": {
@@ -41,7 +41,7 @@ const DevBtn = () => {
       <Divider
         orientation="vertical"
         flexItem
-        sx={{ backgroundColor: "#9ca3af" }}
+        sx={{ backgroundColor: "#6b7280" }}
       />
       <MoreHoriz sx={{ color: "#9ca3af", fontSize: 22, mx: "6px" }} />
     </DevButton>
