@@ -1,13 +1,16 @@
 /* eslint-disable no-unused-vars */
-import MenuIcon from "@mui/icons-material/Menu";
+
+import WebAssetIcon from "@mui/icons-material/WebAsset";
+import { Box } from "@mui/material";
 import MuiAppBar from "@mui/material/AppBar";
-import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
 import React from "react";
+import CommitBtn from "./CommitBtn";
+import ProjectBtn from "./ProjectBtn";
+import DevBtn from "./devBtn";
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -17,6 +20,7 @@ const AppBar = styled(MuiAppBar, {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
+  backgroundColor: "#1f2937",
   ...(open && {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: drawerWidth,
@@ -32,22 +36,22 @@ const AppBar = styled(MuiAppBar, {
 
 const CustomAppBar = ({ open, handleDrawerOpen }) => {
   return (
-    <AppBar open={open}>
-      <Toolbar>
-        <IconButton
-          color="inherit"
-          aria-label="open drawer"
-          onClick={handleDrawerOpen}
-          edge="start"
+    <AppBar open={open} elevation={0}>
+      <Toolbar disableGutters sx={{ px: 2 }}>
+        <ProjectBtn />
+        <DevBtn />
+        <CommitBtn />
+        <Box
           sx={{
-            marginRight: 5,
-            ...(open && { display: "none" }),
+            flexGrow: 1,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-end",
           }}>
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" noWrap component="div">
-          Mini variant drawer
-        </Typography>
+          <WebAssetIcon sx={{ color: "#9ca3af", pr: 1, fontSize: 32 }} />
+          <WebAssetIcon sx={{ color: "#9ca3af", pr: 1, fontSize: 32 }} />
+          <WebAssetIcon sx={{ color: "#9ca3af", pr: 1, fontSize: 32 }} />
+        </Box>
       </Toolbar>
     </AppBar>
   );

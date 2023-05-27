@@ -6,7 +6,7 @@ import App from "./App.jsx";
 const customTheme = createTheme({
   palette: {
     primary: {
-      main: "#0f172a",
+      main: "#030712",
     },
   },
   typography: {
@@ -22,6 +22,10 @@ const customTheme = createTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(","),
+    allVariants: {
+      color: "#9ca3af",
+    },
+    fontSize: 14,
   },
 });
 
