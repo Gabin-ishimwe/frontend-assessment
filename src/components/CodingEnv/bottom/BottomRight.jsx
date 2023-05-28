@@ -12,6 +12,12 @@ import React from "react";
 import { dataRows } from "../../../utils/dataset";
 import CustomChip from "../../folderStructure/CustomChip";
 
+const StyledTable = styled(Table)(({ theme }) => ({
+  "& .MuiTableCell-root": {
+    borderRight: "1px solid #6b7280",
+  },
+}));
+
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   borderColor: "#6b7280",
   [`&.${tableCellClasses.head}`]: {
@@ -25,7 +31,16 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   },
 }));
 
+// const useStyles = makeStyles({
+//   table: {
+//     "&.MuiTableCell-root": {
+//       border: "1px solid red",
+//     },
+//   },
+// });
+
 const BottomRight = () => {
+  //   const classes = useStyles();
   return (
     <Box
       sx={{
@@ -63,7 +78,10 @@ const BottomRight = () => {
       </Box>
       <Divider sx={{ backgroundColor: "#6b7280" }} />
       <TableContainer>
-        <Table sx={{ width: "100%" }} aria-label="simple table">
+        <StyledTable
+          //   className={classes.table}
+          //   sx={{ width: "100%" }}
+          aria-label="simple table">
           <TableHead>
             <TableRow>
               <StyledTableCell>Field</StyledTableCell>
@@ -80,7 +98,7 @@ const BottomRight = () => {
               </TableRow>
             ))}
           </TableBody>
-        </Table>
+        </StyledTable>
       </TableContainer>
     </Box>
   );

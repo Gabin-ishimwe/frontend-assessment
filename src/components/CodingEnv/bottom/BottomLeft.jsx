@@ -60,7 +60,7 @@ const BottomLeft = () => {
           display: "flex",
           alignItems: "center",
           px: 3,
-          py: 3,
+          pt: 3,
         }}>
         <Typography
           sx={{
