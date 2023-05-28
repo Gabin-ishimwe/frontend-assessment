@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MiniDrawer from "./components/Sidebar";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MiniDrawer />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
