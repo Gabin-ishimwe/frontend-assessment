@@ -3,13 +3,27 @@ import { Close } from "@mui/icons-material";
 import { Box, Divider, Typography } from "@mui/material";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
+import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import { styled } from "@mui/material/styles";
 import React from "react";
 import { dataRows } from "../../../utils/dataset";
 import CustomChip from "../../folderStructure/CustomChip";
+
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  borderColor: "#6b7280",
+  [`&.${tableCellClasses.head}`]: {
+    color: "white",
+    fontWeight: "bold",
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+    color: "#6b7280",
+    fontWeight: "bold",
+  },
+}));
 
 const BottomRight = () => {
   return (
@@ -52,8 +66,8 @@ const BottomRight = () => {
         <Table sx={{ width: "100%" }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Field</TableCell>
-              <TableCell align="right">Type</TableCell>
+              <StyledTableCell>Field</StyledTableCell>
+              <StyledTableCell>Type</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -61,11 +75,8 @@ const BottomRight = () => {
               <TableRow
                 key={row.name}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.field}</TableCell>
-                <TableCell align="right">{row.type}</TableCell>
+                <StyledTableCell>{row.field}</StyledTableCell>
+                <StyledTableCell>{row.type}</StyledTableCell>
               </TableRow>
             ))}
           </TableBody>
