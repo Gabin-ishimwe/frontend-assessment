@@ -28,28 +28,100 @@ const Structure = () => {
       <File label={"config"} color={"#06b6d4"} name={"package-form"} />
       <File label={"config"} color={"#06b6d4"} name={"package"} />
       <Folder folderName={"models"}>
-        <Folder folderName={"1_simple_examples"}>
-          <File label={"SQL"} color={"#4ade80"} name={"dataset_1"} />
-          <File label={"SQL"} color={"#4ade80"} name={"dataset_2_with_ref"} />
+        <Folder folderName={"1_simple_examples"} level={true}>
+          <File
+            label={"SQL"}
+            color={"#4ade80"}
+            name={"dataset_1"}
+            level={true}
+          />
+          <File
+            label={"SQL"}
+            color={"#4ade80"}
+            name={"dataset_2_with_ref"}
+            level={true}
+          />
         </Folder>
-        <Folder folderName={"2_advanced_examples"}>
-          <File label={"SQL"} color={"#4ade80"} name={"dataset_3_increased"} />
-          <File label={"JS"} color={"#facc15"} name={"dataset_4_increased"} />
+        <Folder folderName={"2_advanced_examples"} level={true}>
+          <File
+            label={"SQL"}
+            color={"#4ade80"}
+            name={"dataset_3_increased"}
+            level={true}
+          />
+          <File
+            label={"JS"}
+            color={"#facc15"}
+            name={"dataset_4_increased"}
+            level={true}
+          />
         </Folder>
-        <Folder folderName={"3_advanced_examples"}>
-          <File label={"OPS"} color={"#22d3ee"} name={"dataset_3_increased"} />
+        <Folder folderName={"3_advanced_examples"} level={true}>
+          <File
+            label={"OPS"}
+            color={"#22d3ee"}
+            name={"dataset_3_increased"}
+            level={true}
+          />
           <File
             label={"access"}
             color={"#fb923c"}
             name={"dataset_4_increased"}
+            level={true}
           />
         </Folder>
       </Folder>
-      <Folder folderName={"Folder 2"}>
-        <File label={"config"} color={"#06b6d4"} name={"dataform"} />
-        <File label={"config"} color={"#06b6d4"} name={"package-form"} />
-        <File label={"config"} color={"#06b6d4"} name={"package"} />
-        <File label={"config"} color={"#06b6d4"} name={"package-form"} />
+      <Folder folderName={"Models_2"}>
+        <File
+          label={"config"}
+          color={"#06b6d4"}
+          name={"dataform"}
+          level={true}
+        />
+        <File
+          label={"config"}
+          color={"#06b6d4"}
+          name={"package-form"}
+          level={true}
+        />
+        <File
+          label={"config"}
+          color={"#06b6d4"}
+          name={"package"}
+          level={true}
+        />
+        <File
+          label={"config"}
+          color={"#06b6d4"}
+          name={"package-form"}
+          level={true}
+        />
+        <Folder folderName={"Models_2"} level={true}>
+          <File
+            label={"config"}
+            color={"#06b6d4"}
+            name={"dataform"}
+            level={true}
+          />
+          <File
+            label={"config"}
+            color={"#06b6d4"}
+            name={"package-form"}
+            level={true}
+          />
+          <File
+            label={"config"}
+            color={"#06b6d4"}
+            name={"package"}
+            level={true}
+          />
+          <File
+            label={"config"}
+            color={"#06b6d4"}
+            name={"package-form"}
+            level={true}
+          />
+        </Folder>
       </Folder>
     </Box>
   );

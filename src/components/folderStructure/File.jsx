@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { MoreHoriz } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import CustomChip from "./CustomChip";
 
-const File = ({ label, name, color }) => {
+const File = ({ label, name, color, level = false }) => {
   const [isButtonVisible, setIsButtonVisible] = React.useState(false);
 
   const handleMouseEnter = () => {
@@ -29,7 +30,8 @@ const File = ({ label, name, color }) => {
             color: "white",
           },
         },
-        px: 2,
+        pl: level ? 5 : 2,
+        pr: 2,
         py: 1,
       }}>
       <CustomChip label={label} color={color} />

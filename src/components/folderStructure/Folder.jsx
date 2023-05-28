@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import FolderIcon from "@mui/icons-material/Folder";
@@ -42,12 +43,18 @@ const AccordionSummary = styled((props) => (
   },
 }));
 
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({}));
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  padding: 0,
+  margin: 0,
+}));
 
-const Folder = ({ children, folderName }) => {
+const Folder = ({ children, folderName, level = false }) => {
   return (
     <div>
-      <Accordion>
+      <Accordion
+        sx={{
+          ml: level ? 2.5 : 0,
+        }}>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Box
             sx={{

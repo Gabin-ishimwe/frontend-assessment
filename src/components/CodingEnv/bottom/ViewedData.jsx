@@ -1,18 +1,10 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
 const ViewedData = ({ label }) => {
-  const [isButtonVisible, setIsButtonVisible] = React.useState(false);
-
-  const handleMouseEnter = () => {
-    setIsButtonVisible(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsButtonVisible(false);
-  };
   return (
     <Box
       sx={{

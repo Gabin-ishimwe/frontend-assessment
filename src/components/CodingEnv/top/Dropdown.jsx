@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { Box, Typography } from "@mui/material";
