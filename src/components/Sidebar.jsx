@@ -38,10 +38,9 @@ export default function MiniDrawer() {
         sx={{
           flexGrow: 1,
           display: "flex",
-          height: "calc(100vh - 48px)",
-          mt: 6,
+          height: "calc(100vh - 64px)",
+          marginTop: 8,
         }}>
-        {/* <DrawerHeader /> */}
         <Structure />
         <Ide />
       </Box>

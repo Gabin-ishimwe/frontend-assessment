@@ -3,15 +3,18 @@ import FindInPageIcon from "@mui/icons-material/FindInPage";
 import SchemaIcon from "@mui/icons-material/Schema";
 import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
+import BottomLeft from "./BottomLeft";
+import BottomRight from "./BottomRight";
 
 const BottomSection = () => {
   return (
     <Box
       sx={{
-        // flexBasis: "calc(50% - 42px)",
-        flex: 1,
+        flex: "1 1 50%",
+        // flexBasis: "50%",
+        // flexGrow: 1,
         backgroundColor: "#1f2937",
-        // height: "100%",
+        overflow: "hidden",
       }}>
       <Box
         sx={{
@@ -46,21 +49,15 @@ const BottomSection = () => {
       <Box
         sx={{
           display: "flex",
-          //   height: "100%",
+          height: "100%",
         }}>
-        <Box
-          sx={{
-            flexBasis: "40%",
-          }}></Box>
+        <BottomLeft />
         <Divider
           orientation="vertical"
           sx={{ backgroundColor: "#6b7280" }}
           flexItem
         />
-        <Box
-          sx={{
-            flexBasis: "60%",
-          }}></Box>
+        <BottomRight />
       </Box>
     </Box>
   );

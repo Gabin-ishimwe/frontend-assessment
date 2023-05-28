@@ -9,7 +9,6 @@ const Structure = () => {
     <Box
       sx={{
         flexBasis: "20%",
-        maxWidth: "100%",
         backgroundColor: "#4b5563",
         overflow: "hidden",
         overflowY: "auto",

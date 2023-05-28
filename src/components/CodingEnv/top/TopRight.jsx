@@ -44,6 +44,7 @@ const TopRight = () => {
     <Box
       sx={{
         flexBasis: "30%",
+        overflowY: "auto",
       }}>
       <Box
         sx={{

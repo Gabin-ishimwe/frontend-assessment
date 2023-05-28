@@ -7,14 +7,17 @@ const TopSection = () => {
   return (
     <Box
       sx={{
-        // flexBasis: "calc(50% + 42px)",
-        flex: 1,
+        flex: "1 1 50%",
         display: "flex",
+        height: "100%",
+        overflow: "hidden",
       }}>
       <Box
         sx={{
           flexBasis: "70%",
-        }}></Box>
+        }}>
+        <p>Hellow world</p>
+      </Box>
       <Divider
         orientation="vertical"
         sx={{ backgroundColor: "#6b7280" }}
