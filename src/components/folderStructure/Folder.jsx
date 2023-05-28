@@ -44,17 +44,19 @@ const AccordionSummary = styled((props) => (
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: 0,
-  margin: 0,
+  // padding: 0,
+  // margin: 0,
 }));
 
 const Folder = ({ children, folderName, level = false }) => {
   return (
     <div>
       <Accordion
-        sx={{
-          ml: level ? 2.5 : 0,
-        }}>
+        sx={
+          {
+            // pl: level ? 2.5 : 0,
+          }
+        }>
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Box
             sx={{

@@ -84,7 +84,20 @@ GROUP BY 1, 2`;
           px: 3,
           py: 2,
         }}>
-        <Breadcrumbs aria-label="breadcrumb">{breadcrumbs}</Breadcrumbs>
+        <Breadcrumbs
+          separator={
+            <Typography
+              sx={{
+                color: "#6b7280",
+                fontSize: "18px",
+                fontWeight: 400,
+              }}>
+              /
+            </Typography>
+          }
+          aria-label="breadcrumb">
+          {breadcrumbs}
+        </Breadcrumbs>
         <Button
           variant="contained"
           disableElevation

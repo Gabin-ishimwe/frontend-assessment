@@ -34,6 +34,7 @@ const Structure = () => {
             color={"#4ade80"}
             name={"dataset_1"}
             level={true}
+            levelFolder={true}
           />
           <File
             label={"SQL"}

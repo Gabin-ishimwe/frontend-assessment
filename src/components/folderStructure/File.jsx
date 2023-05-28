@@ -5,7 +5,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import CustomChip from "./CustomChip";
 
-const File = ({ label, name, color, level = false }) => {
+const File = ({ label, name, color, level = false, levelFolder = false }) => {
   const [isButtonVisible, setIsButtonVisible] = React.useState(false);
 
   const handleMouseEnter = () => {
@@ -30,7 +30,7 @@ const File = ({ label, name, color, level = false }) => {
             color: "white",
           },
         },
-        pl: level ? 5 : 2,
+        pl: 2,
         pr: 2,
         py: 1,
       }}>
