@@ -91,7 +91,7 @@ const BottomRight = () => {
           <TableBody>
             {dataRows.map((row) => (
               <TableRow
-                key={row.name}
+                key={row.field}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
                 <StyledTableCell>{row.field}</StyledTableCell>
                 <StyledTableCell>{row.type}</StyledTableCell>

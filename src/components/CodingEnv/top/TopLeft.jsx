@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import Editor, { useMonaco } from "@monaco-editor/react";
+import Editor from "@monaco-editor/react";
 import {
   Box,
   Breadcrumbs,
@@ -11,7 +11,6 @@ import {
 import React from "react";
 
 const TopLeft = () => {
-  const monaco = useMonaco();
   const breadcrumbs = [
     <Link
       underline="hover"
@@ -57,20 +56,6 @@ SELECT country as country
 FROM my_table
 WHERE country = "FRANCE"
 GROUP BY 1, 2`;
-
-  React.useEffect(() => {
-    const editorTheme = {
-      base: "vs-dark", // Specify the base theme (you can choose other themes as well)
-      inherit: true, // Inherit the rest of the theme from the base theme
-      rules: [],
-      colors: {
-        // Customize background and other colors
-        "editor.background": "#374151",
-        "editorLineNumber.foreground": "#ddd",
-      },
-    };
-    monaco.editor.defineTheme("custom-theme", editorTheme);
-  }, [monaco]);
   return (
     <Box
       sx={{
@@ -121,6 +106,20 @@ GROUP BY 1, 2`;
         theme="custom-theme"
         defaultLanguage="sql"
         value={content}
+        beforeMount={(monaco) => {
+          const editorTheme = {
+            base: "vs-dark", // Specify the base theme (you can choose other themes as well)
+            inherit: true, // Inherit the rest of the theme from the base theme
+            rules: [],
+            colors: {
+              // Customize background and other colors
+              "editor.background": "#374151",
+              "editorLineNumber.foreground": "#ddd",
+            },
+          };
+          console.log("before mounted---");
+          monaco.editor.defineTheme("custom-theme", editorTheme);
+        }}
       />
     </Box>
   );
